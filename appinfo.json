@@ -1,0 +1,144 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "Javelin Works",
+    "longName": "Hachune",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/sun.png",
+                "name": "IMAGE_SUN",
+                "type": "png"
+            },
+            {
+                "file": "images/snow.png",
+                "name": "IMAGE_SNOW",
+                "type": "png"
+            },
+            {
+                "file": "images/rain.png",
+                "name": "IMAGE_RAIN",
+                "type": "png"
+            },
+            {
+                "file": "images/cloud.png",
+                "name": "IMAGE_CLOUD",
+                "type": "png"
+            },
+            {
+                "file": "images/charge.png",
+                "name": "IMAGE_CHARGE_ICON_1",
+                "type": "png"
+            },
+            {
+                "file": "images/battery10.png",
+                "name": "IMAGE_BATTERY_ICON_100",
+                "type": "png"
+            },
+            {
+                "file": "images/battery09.png",
+                "name": "IMAGE_BATTERY_ICON_090",
+                "type": "png"
+            },
+            {
+                "file": "images/battery08.png",
+                "name": "IMAGE_BATTERY_ICON_080",
+                "type": "png"
+            },
+            {
+                "file": "images/battery07.png",
+                "name": "IMAGE_BATTERY_ICON_070",
+                "type": "png"
+            },
+            {
+                "file": "images/battery06.png",
+                "name": "IMAGE_BATTERY_ICON_060",
+                "type": "png"
+            },
+            {
+                "file": "images/battery05.png",
+                "name": "IMAGE_BATTERY_ICON_050",
+                "type": "png"
+            },
+            {
+                "file": "images/battery04.png",
+                "name": "IMAGE_BATTERY_ICON_040",
+                "type": "png"
+            },
+            {
+                "file": "images/battery03.png",
+                "name": "IMAGE_BATTERY_ICON_030",
+                "type": "png"
+            },
+            {
+                "file": "images/battery02.png",
+                "name": "IMAGE_BATTERY_ICON_020",
+                "type": "png"
+            },
+            {
+                "file": "images/battery01.png",
+                "name": "IMAGE_BATTERY_ICON_010",
+                "type": "png"
+            },
+            {
+                "file": "images/battery00.png",
+                "name": "IMAGE_BATTERY_ICON_000",
+                "type": "png"
+            },
+            {
+                "file": "images/charge_x.png",
+                "name": "IMAGE_CHARGE_ICON_2",
+                "type": "png"
+            },
+            {
+                "file": "images/bluetooth.png",
+                "name": "IMAGE_BLUETOOTH_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/bluetooth_x.png",
+                "name": "IMAGE_BLUETOOTH_X_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune_icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_HACHUNE_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune01.png",
+                "name": "IMAGE_HACHUNE01",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune02.png",
+                "name": "IMAGE_HACHUNE02",
+                "type": "png"
+            },
+            {
+                "file": "images/index.png",
+                "name": "IMAGE_INDEX",
+                "type": "png"
+            },
+            {
+                "file": "fonts/perfect-dos-vga.ttf",
+                "name": "FONT_PERFECT_DOS_28",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Hachune",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "2e321a4c-5cac-4055-8930-4cf9de9b4cfb",
+    "versionLabel": "0.1",
+    "watchapp": {
+        "watchface": true
+    }
+}
