@@ -1,7 +1,9 @@
 {
     "appKeys": {
-        "WEATHER_CONDITION": 10,
-        "WEATHER_TEMPERATURE": 11
+        "WEATHER_CONDITION": 11,
+        "WEATHER_TEMPERATURE": 12,
+        "WEATHER_UPDATE": 10,
+        "WEATHER_WIND_SPEED": 13
     },
     "capabilities": [
         "location"
