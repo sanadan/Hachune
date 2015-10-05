@@ -1,5 +1,8 @@
 {
-    "appKeys": {},
+    "appKeys": {
+        "WEATHER_CONDITION": 10,
+        "WEATHER_TEMPERATURE": 11
+    },
     "capabilities": [
         "location"
     ],

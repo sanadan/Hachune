@@ -1,5 +1,6 @@
 #include <pebble.h>
-
+#include "weather.h"
+  
 // Main window
 static Window *s_main_window;
 
@@ -34,14 +35,6 @@ static GBitmap *Charge_icon[2];
 static TextLayer *Date_layer;
 static GFont Date_font;
 
-static TextLayer *temperature_layer;
-static char temperature[16];
-
-static BitmapLayer *icon_layer;
-static GBitmap *icon_bitmap = NULL;
-
-static AppSync sync;
-static uint8_t sync_buffer[32];
 
 static void update_battery_state(BatteryChargeState state)
 {
@@ -205,12 +198,18 @@ static void main_window_load(Window *window) {
   // Subscribe battery state
   Battery_state = battery_state_service_peek();
   battery_state_service_subscribe( update_battery_state );
+
+  // Weather
+  weather_load( window );
   
   // Make sure the time is displayed from the start
   update_time();
 }
 
 static void main_window_unload(Window *window) {
+  // Weather
+  weather_unload();
+  
   // Unsubscribe battery state
   battery_state_service_unsubscribe();
   
@@ -258,7 +257,36 @@ static void main_window_unload(Window *window) {
   text_layer_destroy(s_time_layer);
 }
 
+static void inbox_received_callback( DictionaryIterator *iterator, void *context )
+{
+  APP_LOG( APP_LOG_LEVEL_INFO, "Inbox received" );
+
+  weather_received_callback( iterator, context );
+}
+
+static void inbox_dropped_callback( AppMessageResult reason, void *context )
+{
+  APP_LOG( APP_LOG_LEVEL_ERROR, "Inbox dropped!" );
+}
+
+static void outbox_failed_callback( DictionaryIterator *iterator, AppMessageResult reason, void *context )
+{
+  APP_LOG( APP_LOG_LEVEL_ERROR, "Outbox send failed!" );
+}
+
+static void outbox_sent_callback( DictionaryIterator *iterator, void *context )
+{
+  APP_LOG( APP_LOG_LEVEL_INFO, "Outbox send success" );
+}
+
 static void init() {
+  // Register callbacks
+  app_message_register_inbox_received( inbox_received_callback );
+  app_message_register_inbox_dropped( inbox_dropped_callback );
+  app_message_register_outbox_failed( outbox_failed_callback );
+  app_message_register_outbox_sent( outbox_sent_callback );
+  app_message_open(app_message_inbox_size_maximum(), app_message_outbox_size_maximum());    
+
   // Create main Window element and assign to pointer
   s_main_window = window_create();
 
