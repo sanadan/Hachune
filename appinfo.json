@@ -1,5 +1,6 @@
 {
     "appKeys": {
+        "WEATHER_CITY": 14,
         "WEATHER_CONDITION": 11,
         "WEATHER_TEMPERATURE": 12,
         "WEATHER_UPDATE": 10,
@@ -8,7 +9,7 @@
     "capabilities": [
         "location"
     ],
-    "companyName": "Javelin Works",
+    "companyName": "Javelin works",
     "longName": "Hachune",
     "projectType": "native",
     "resources": {
@@ -142,7 +143,7 @@
         "basalt"
     ],
     "uuid": "2e321a4c-5cac-4055-8930-4cf9de9b4cfb",
-    "versionLabel": "0.1",
+    "versionLabel": "1.0",
     "watchapp": {
         "watchface": true
     }

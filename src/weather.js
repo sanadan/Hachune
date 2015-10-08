@@ -21,7 +21,7 @@ function locationSuccess( pos )
     {
       // responseText contains a JSON object with weather info
       var json = JSON.parse( responseText );
-
+      
       // Temperature in Kelvin requires adjustment
       var temperature = Math.round( json.main.temp - 273.15 );
       console.log( 'Temperature is ' + temperature );
@@ -33,6 +33,9 @@ function locationSuccess( pos )
       // Wind speed
       var wind_speed = json.wind.speed;
       console.log( 'Wind speed is ' + wind_speed ) ;
+      
+      // City
+      var city = json.name;
 
       // Assemble dictionary using our keys
       var dictionary =
@@ -40,6 +43,7 @@ function locationSuccess( pos )
         'WEATHER_CONDITION': conditions,
         'WEATHER_TEMPERATURE': temperature,
         'WEATHER_WIND_SPEED' : String( wind_speed ),
+        'WEATHER_CITY' : city,
       };
       
       // Send to Pebble
