@@ -129,11 +129,6 @@
                 "file": "images/index.png",
                 "name": "IMAGE_INDEX",
                 "type": "png"
-            },
-            {
-                "file": "fonts/perfect-dos-vga.ttf",
-                "name": "FONT_PERFECT_DOS_28",
-                "type": "font"
             }
         ]
     },
@@ -143,7 +138,7 @@
         "basalt"
     ],
     "uuid": "2e321a4c-5cac-4055-8930-4cf9de9b4cfb",
-    "versionLabel": "1.0",
+    "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
     }

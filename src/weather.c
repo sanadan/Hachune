@@ -72,7 +72,7 @@ void weather_load_sub( TextLayer **layer, const Window *window_ptr, const GRect 
   text_layer_set_background_color( *layer, GColorClear );
   text_layer_set_text_color( *layer, GColorBlack );
   text_layer_set_text_alignment( *layer, GTextAlignmentLeft );
-  text_layer_set_text( *layer, "-" );
+//  text_layer_set_text( *layer, "-" );
   text_layer_set_font( *layer, fonts_get_system_font( FONT_KEY_GOTHIC_14_BOLD ) );
   layer_add_child( window_get_root_layer( window_ptr ), text_layer_get_layer( *layer ) );
   
@@ -89,7 +89,8 @@ void weather_load( const Window *window_ptr, const GPoint point )
 
 void weather_unload()
 {
-  text_layer_destroy( Wind_speed_layer );
-  text_layer_destroy( Temperature_layer );
+  text_layer_destroy( City_layer );
   text_layer_destroy( Conditions_layer );
+  text_layer_destroy( Temperature_layer );
+  text_layer_destroy( Wind_speed_layer );
 }
