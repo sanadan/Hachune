@@ -36,14 +36,15 @@ void time_update( const struct tm* tick_time )
 
 void time_load( const Window *window_ptr, const GPoint point )
 {
-  Time_layer = text_layer_create( GRect( point.x, point.y, 136 - point.x, 16 ) );
+  Time_layer = text_layer_create( GRect( point.x, point.y, 136 - point.x, 28 ) );
   text_layer_set_background_color( Time_layer, GColorClear );
 #ifdef PBL_COLOR
   text_layer_set_text_color( Time_layer, GColorBlack );
 #else
   text_layer_set_text_color( Time_layer, GColorBlack );
 #endif
-  text_layer_set_font( Time_layer, fonts_get_system_font( FONT_KEY_GOTHIC_14_BOLD ) );
+//  text_layer_set_font( Time_layer, fonts_get_system_font( FONT_KEY_GOTHIC_14_BOLD ) );
+  text_layer_set_font( Time_layer, fonts_get_system_font( FONT_KEY_LECO_26_BOLD_NUMBERS_AM_PM ) );
   layer_add_child( window_get_root_layer( window_ptr ), text_layer_get_layer( Time_layer ) );
   text_layer_set_text_alignment( Time_layer, GTextAlignmentLeft );
 }
