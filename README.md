@@ -4,6 +4,9 @@
 
 ## Change log
 
+### 1.3
+* Change font.
+
 ### 1.2
 * Add API key for getting weather. (API specification is changed by OpenWeatherMap.)
 
