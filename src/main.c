@@ -23,10 +23,10 @@ void tick_handler( struct tm *tick_time, TimeUnits units_changed )
 void main_window_load( Window *window_ptr )
 {
   background_load( window_ptr, GPoint( 0, 20 ) );  // max 144 * 144
-  weather_load( window_ptr, GPoint( 4, 105 ) );  // x * 16
-  bluetooth_load( window_ptr, GPoint( 131, 19 ) );  // 9 * 13
-  battery_load( window_ptr, GPoint( 84, 3 ) ) ;  // x * 13
-  time_load( window_ptr, GPoint( 4, 16 ) );  // x * 16
+  weather_load( window_ptr, GPoint( 4, 109 ) );  // x * 16
+  bluetooth_load( window_ptr, GPoint( 131, 153 ) );  // 9 * 13
+  battery_load( window_ptr, GPoint( 84, 1 ) ) ;  // x * 13
+  time_load( window_ptr, GPoint( 4, 14 ) );  // x * 16
   date_load( window_ptr, GPoint( 4, 0 ) );  // x * 16
 }
 

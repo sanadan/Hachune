@@ -15,23 +15,23 @@
     "resources": {
         "media": [
             {
-                "file": "images/sun.png",
-                "name": "IMAGE_SUN",
-                "type": "png"
+                "file": "fonts/digital.ttf",
+                "name": "FONT_DIGITAL_12",
+                "type": "font"
             },
             {
-                "file": "images/snow.png",
-                "name": "IMAGE_SNOW",
-                "type": "png"
-            },
-            {
-                "file": "images/rain.png",
-                "name": "IMAGE_RAIN",
-                "type": "png"
+                "file": "fonts/digital.ttf",
+                "name": "FONT_DIGITAL_32",
+                "type": "font"
             },
             {
                 "file": "images/cloud.png",
                 "name": "IMAGE_CLOUD",
+                "type": "png"
+            },
+            {
+                "file": "images/index.png",
+                "name": "IMAGE_INDEX",
                 "type": "png"
             },
             {
@@ -40,18 +40,8 @@
                 "type": "png"
             },
             {
-                "file": "images/battery10.png",
-                "name": "IMAGE_BATTERY_ICON_100",
-                "type": "png"
-            },
-            {
-                "file": "images/battery09.png",
-                "name": "IMAGE_BATTERY_ICON_090",
-                "type": "png"
-            },
-            {
-                "file": "images/battery08.png",
-                "name": "IMAGE_BATTERY_ICON_080",
+                "file": "images/battery06.png",
+                "name": "IMAGE_BATTERY_ICON_060",
                 "type": "png"
             },
             {
@@ -60,18 +50,8 @@
                 "type": "png"
             },
             {
-                "file": "images/battery06.png",
-                "name": "IMAGE_BATTERY_ICON_060",
-                "type": "png"
-            },
-            {
-                "file": "images/battery05.png",
-                "name": "IMAGE_BATTERY_ICON_050",
-                "type": "png"
-            },
-            {
-                "file": "images/battery04.png",
-                "name": "IMAGE_BATTERY_ICON_040",
+                "file": "images/snow.png",
+                "name": "IMAGE_SNOW",
                 "type": "png"
             },
             {
@@ -80,8 +60,18 @@
                 "type": "png"
             },
             {
-                "file": "images/battery02.png",
-                "name": "IMAGE_BATTERY_ICON_020",
+                "file": "images/bluetooth_x.png",
+                "name": "IMAGE_BLUETOOTH_X_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune01.png",
+                "name": "IMAGE_HACHUNE01",
+                "type": "png"
+            },
+            {
+                "file": "images/battery08.png",
+                "name": "IMAGE_BATTERY_ICON_080",
                 "type": "png"
             },
             {
@@ -90,8 +80,44 @@
                 "type": "png"
             },
             {
-                "file": "images/battery00.png",
-                "name": "IMAGE_BATTERY_ICON_000",
+                "file": "images/rain.png",
+                "name": "IMAGE_RAIN",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune02.png",
+                "name": "IMAGE_HACHUNE02",
+                "type": "png"
+            },
+            {
+                "file": "images/battery09.png",
+                "name": "IMAGE_BATTERY_ICON_090",
+                "type": "png"
+            },
+            {
+                "file": "images/battery10.png",
+                "name": "IMAGE_BATTERY_ICON_100",
+                "type": "png"
+            },
+            {
+                "file": "images/battery04.png",
+                "name": "IMAGE_BATTERY_ICON_040",
+                "type": "png"
+            },
+            {
+                "file": "images/hachune_icon.png",
+                "menuIcon": true,
+                "name": "IMAGE_HACHUNE_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/battery05.png",
+                "name": "IMAGE_BATTERY_ICON_050",
+                "type": "png"
+            },
+            {
+                "file": "images/sun.png",
+                "name": "IMAGE_SUN",
                 "type": "png"
             },
             {
@@ -105,29 +131,13 @@
                 "type": "png"
             },
             {
-                "file": "images/bluetooth_x.png",
-                "name": "IMAGE_BLUETOOTH_X_ICON",
+                "file": "images/battery02.png",
+                "name": "IMAGE_BATTERY_ICON_020",
                 "type": "png"
             },
             {
-                "file": "images/hachune_icon.png",
-                "menuIcon": true,
-                "name": "IMAGE_HACHUNE_ICON",
-                "type": "png"
-            },
-            {
-                "file": "images/hachune01.png",
-                "name": "IMAGE_HACHUNE01",
-                "type": "png"
-            },
-            {
-                "file": "images/hachune02.png",
-                "name": "IMAGE_HACHUNE02",
-                "type": "png"
-            },
-            {
-                "file": "images/index.png",
-                "name": "IMAGE_INDEX",
+                "file": "images/battery00.png",
+                "name": "IMAGE_BATTERY_ICON_000",
                 "type": "png"
             }
         ]
@@ -138,7 +148,7 @@
         "basalt"
     ],
     "uuid": "2e321a4c-5cac-4055-8930-4cf9de9b4cfb",
-    "versionLabel": "1.2",
+    "versionLabel": "1.3",
     "watchapp": {
         "watchface": true
     }

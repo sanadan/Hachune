@@ -6,6 +6,7 @@ TextLayer *Conditions_layer;
 TextLayer *Temperature_layer;
 TextLayer *Wind_speed_layer;
 TextLayer *City_layer;
+GFont Weather_font;
 
 // Update wether info
 void weather_update( const struct tm *tick_time )
@@ -72,19 +73,19 @@ void weather_load_sub( TextLayer **layer, const Window *window_ptr, const GRect 
   text_layer_set_background_color( *layer, GColorClear );
   text_layer_set_text_color( *layer, GColorBlack );
   text_layer_set_text_alignment( *layer, GTextAlignmentLeft );
-//  text_layer_set_text( *layer, "-" );
-  text_layer_set_font( *layer, fonts_get_system_font( FONT_KEY_GOTHIC_14_BOLD ) );
+//  text_layer_set_font( *layer, fonts_get_system_font( FONT_KEY_GOTHIC_14_BOLD ) );
+  text_layer_set_font( *layer, Weather_font );
   layer_add_child( window_get_root_layer( window_ptr ), text_layer_get_layer( *layer ) );
-  
 }
 
 void weather_load( const Window *window_ptr, const GPoint point )
 {
   int size_x = 136 - point.x;
-  weather_load_sub( &Wind_speed_layer, window_ptr, GRect( point.x, point.y + 48, size_x, 16 ) );
-  weather_load_sub( &Temperature_layer, window_ptr, GRect( point.x, point.y + 32, size_x, 16 ) );
-  weather_load_sub( &Conditions_layer, window_ptr, GRect( point.x, point.y + 16, size_x, 16 ) );
-  weather_load_sub( &City_layer, window_ptr, GRect( point.x, point.y, size_x, 16 ) );
+  Weather_font = fonts_load_custom_font( resource_get_handle( RESOURCE_ID_FONT_DIGITAL_12 ) );
+  weather_load_sub( &Wind_speed_layer, window_ptr, GRect( point.x, point.y + 42, size_x, 12 ) );
+  weather_load_sub( &Temperature_layer, window_ptr, GRect( point.x, point.y + 28, size_x, 12 ) );
+  weather_load_sub( &Conditions_layer, window_ptr, GRect( point.x, point.y + 14, size_x, 12 ) );
+  weather_load_sub( &City_layer, window_ptr, GRect( point.x, point.y, size_x, 14 ) );
 }
 
 void weather_unload()
@@ -93,4 +94,5 @@ void weather_unload()
   text_layer_destroy( Conditions_layer );
   text_layer_destroy( Temperature_layer );
   text_layer_destroy( Wind_speed_layer );
+  fonts_unload_custom_font( Weather_font );
 }
